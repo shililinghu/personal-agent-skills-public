@@ -1,0 +1,1189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SingleUserGaokaoFeishuArchivePayload",
+  "type": "object",
+  "required": [
+    "archive_title",
+    "consult_id",
+    "user_profile",
+    "rejection_rules",
+    "positioning_method_rationale",
+    "candidate_schools",
+    "major_cards",
+    "research_tasks",
+    "source_candidates",
+    "evidence_sources",
+    "risk_checks",
+    "volunteer_plan",
+    "version_records",
+    "report_markdown",
+    "share_policy"
+  ],
+  "properties": {
+    "archive_title": {
+      "type": "string"
+    },
+    "consult_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "user_profile": {
+      "type": "object",
+      "properties": {
+        "province": {
+          "type": "string"
+        },
+        "score": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "rank": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "subjects": {
+          "type": "string"
+        },
+        "batch": {
+          "type": "string"
+        },
+        "budget": {
+          "type": "string"
+        },
+        "accept_outside_province": {
+          "type": "string"
+        },
+        "accept_adjustment": {
+          "type": "string"
+        },
+        "accept_private": {
+          "type": "string"
+        },
+        "accept_joint_program": {
+          "type": "string"
+        },
+        "postgraduate_plan": {
+          "type": "string"
+        },
+        "priority_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "family_student_disagreement": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "rejection_rules": {
+      "type": "object",
+      "properties": {
+        "absolute_rejections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cautious_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "acceptable_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "candidate_schools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "school_name": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "school_type": {
+            "type": "string"
+          },
+          "school_level": {
+            "type": "string"
+          },
+          "major_or_group": {
+            "type": "string"
+          },
+          "historical_rank": {
+            "type": "string"
+          },
+          "admission_plan": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "冲",
+              "稳",
+              "保",
+              "慎选",
+              "待定"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "main_risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "verification_status": {
+            "enum": [
+              "未核验",
+              "已核验",
+              "存疑",
+              "待补充"
+            ]
+          },
+          "selected_final": {
+            "type": "boolean"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "positioning_method_used": {
+            "enum": [
+              "位次法",
+              "同位分法",
+              "线差法",
+              "组合定位",
+              "待定"
+            ]
+          },
+          "positioning_reason": {
+            "type": "string",
+            "description": "该候选项被纳入冲/稳/保/慎选的定位依据"
+          },
+          "positioning_method_rationale_id": {
+            "type": "string",
+            "description": "关联定位方法选择说明"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "major_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "major_name": {
+            "type": "string"
+          },
+          "major_category": {
+            "type": "string"
+          },
+          "what_to_study": {
+            "type": "string"
+          },
+          "core_courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "suitable_for": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "not_suitable_for": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "math_requirement": {
+            "type": "string"
+          },
+          "physics_requirement": {
+            "type": "string"
+          },
+          "chem_bio_requirement": {
+            "type": "string"
+          },
+          "postgraduate_recommendation": {
+            "type": "string"
+          },
+          "employment_directions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "work_environment": {
+            "type": "string"
+          },
+          "industry_cycle": {
+            "type": "string"
+          },
+          "common_misunderstandings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "application_risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "conclusion": {
+            "enum": [
+              "推荐",
+              "谨慎",
+              "不建议",
+              "需进一步了解",
+              "待核验"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "evidence_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "source_level",
+          "summary",
+          "decision_impact",
+          "verification_status"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "related_school": {
+            "type": "string"
+          },
+          "related_major": {
+            "type": "string"
+          },
+          "info_type": {
+            "type": "string"
+          },
+          "source_level": {
+            "enum": [
+              "官方",
+              "半官方",
+              "公共服务",
+              "访谈",
+              "经验参考",
+              "待核验"
+            ]
+          },
+          "source_name": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "decision_impact": {
+            "enum": [
+              "支持",
+              "反对",
+              "提醒风险",
+              "待确认"
+            ]
+          },
+          "verified_at": {
+            "type": "string"
+          },
+          "credibility": {
+            "enum": [
+              "高",
+              "中",
+              "低",
+              "待核验"
+            ]
+          },
+          "needs_second_check": {
+            "type": "boolean"
+          },
+          "verification_status": {
+            "enum": [
+              "未核验",
+              "已核验",
+              "存疑",
+              "待补充"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "risk_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "risk_item": {
+            "type": "string"
+          },
+          "exists": {
+            "enum": [
+              "是",
+              "否",
+              "待核验"
+            ]
+          },
+          "level": {
+            "enum": [
+              "高",
+              "中",
+              "低",
+              "待核验"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "suggestion": {
+            "type": "string"
+          },
+          "related_target": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "volunteer_plan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "integer"
+          },
+          "school": {
+            "type": "string"
+          },
+          "major_or_group": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "冲",
+              "稳",
+              "保"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scores": {
+            "type": "object",
+            "properties": {
+              "admission_safety": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "major_fit": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "school_resource": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "city_opportunity": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "employment_outlet": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "further_study": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "family_affordability": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "adjustment_risk": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "regret_risk": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "description": "仅存放用户已确认评分或基于用户评分计算的结果；不得由 Agent 自行代打主观分。"
+          },
+          "selected_final": {
+            "type": "boolean"
+          },
+          "score_source_note": {
+            "type": "string",
+            "description": "说明分数来源；用户评分未完成时必须写待用户评分"
+          },
+          "user_preference_total": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "risk_level": {
+            "enum": [
+              "高",
+              "中",
+              "低",
+              "待核验"
+            ]
+          },
+          "scoring_status": {
+            "enum": [
+              "待用户评分",
+              "部分评分",
+              "已评分"
+            ]
+          },
+          "positioning_method_used": {
+            "enum": [
+              "位次法",
+              "同位分法",
+              "线差法",
+              "组合定位",
+              "待定"
+            ]
+          },
+          "positioning_reason": {
+            "type": "string",
+            "description": "该志愿的冲稳保定位原因"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "version_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "change_reason": {
+            "type": "string"
+          },
+          "major_changes": {
+            "type": "string"
+          },
+          "pending_verifications": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "operator": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "report_markdown": {
+      "type": "string"
+    },
+    "share_policy": {
+      "type": "object",
+      "properties": {
+        "default_visibility": {
+          "enum": [
+            "owner_only",
+            "authorized_people_only"
+          ]
+        },
+        "authorized_recipients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allow_public_link": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "research_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "research_id": {
+            "type": "string"
+          },
+          "related_target": {
+            "type": "string"
+          },
+          "school_name": {
+            "type": "string"
+          },
+          "major_or_group": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "school_facts": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "major_facts": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "city_facts": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pending_user_score_dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "verification_status": {
+            "enum": [
+              "未核验",
+              "已核验",
+              "存疑",
+              "待补充"
+            ]
+          },
+          "search_completed": {
+            "type": "boolean",
+            "description": "是否已完成联网检索或明确标注无法联网"
+          },
+          "source_candidate_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "used_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pending_information": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ready_for_user_scoring": {
+            "enum": [
+              "可以",
+              "部分可以",
+              "不建议评分资料不足"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "user_score_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "score_id": {
+            "type": "string"
+          },
+          "related_target": {
+            "type": "string"
+          },
+          "score_category": {
+            "enum": [
+              "院校",
+              "专业",
+              "城市",
+              "风险"
+            ]
+          },
+          "dimension": {
+            "type": "string"
+          },
+          "agent_information_summary": {
+            "type": "string",
+            "description": "供用户评分参考的信息摘要，必须来自联网信息整理包或明确标注资料不足。"
+          },
+          "user_score": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "user_reason": {
+            "type": "string"
+          },
+          "confirmation_status": {
+            "enum": [
+              "未评分",
+              "已确认",
+              "需再看"
+            ]
+          },
+          "confirmed_by": {
+            "type": "string"
+          },
+          "confirmed_at": {
+            "type": "string"
+          },
+          "research_card_id": {
+            "type": "string",
+            "description": "对应资料卡。用户评分前必须已有资料卡摘要。"
+          },
+          "information_sufficiency": {
+            "enum": [
+              "充分",
+              "部分充分",
+              "资料不足"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "score_summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "related_target": {
+            "type": "string"
+          },
+          "school_average": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "major_average": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "city_average": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "school_weight": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "major_weight": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "city_weight": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "user_preference_total": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "risk_level": {
+            "enum": [
+              "高",
+              "中",
+              "低",
+              "待核验"
+            ]
+          },
+          "pending_verification_count": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "suggested_action": {
+            "enum": [
+              "保留",
+              "继续核验",
+              "慎选",
+              "排除",
+              "待用户评分"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "positioning_method_rationale": {
+      "type": "object",
+      "description": "解释本次初筛为什么采用位次法、同位分法、线差法或组合定位。Agent 填写，属于客观定位逻辑，不是用户主观评分。",
+      "required": [
+        "primary_method",
+        "selection_reason",
+        "method_risks",
+        "verification_status",
+        "training_rule_basis",
+        "calculation_trace",
+        "forbidden_reason_check"
+      ],
+      "properties": {
+        "primary_method": {
+          "enum": [
+            "位次法",
+            "同位分法",
+            "线差法",
+            "组合定位",
+            "待定"
+          ]
+        },
+        "auxiliary_methods": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "位次法",
+              "同位分法",
+              "线差法",
+              "无"
+            ]
+          }
+        },
+        "score_band_judgement": {
+          "type": "string",
+          "description": "高分段/中分段/低分段/压线/待判断，以及判断依据"
+        },
+        "available_data": {
+          "type": "object",
+          "properties": {
+            "score_available": {
+              "type": "boolean"
+            },
+            "rank_available": {
+              "type": "boolean"
+            },
+            "batch_line_available": {
+              "type": "boolean"
+            },
+            "line_difference_available": {
+              "type": "boolean"
+            },
+            "current_one_point_table_available": {
+              "type": "boolean"
+            },
+            "historical_one_point_tables_available": {
+              "type": "boolean"
+            },
+            "historical_admission_scores_available": {
+              "type": "boolean"
+            },
+            "historical_admission_ranks_available": {
+              "type": "boolean"
+            },
+            "historical_batch_lines_available": {
+              "type": "boolean"
+            },
+            "admission_plan_change_available": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": true
+        },
+        "selection_reason": {
+          "type": "string",
+          "description": "为什么选择主方法"
+        },
+        "rank_method_status": {
+          "enum": [
+            "主方法",
+            "辅助",
+            "暂不使用",
+            "待定"
+          ]
+        },
+        "rank_method_reason": {
+          "type": "string"
+        },
+        "equivalent_score_method_status": {
+          "enum": [
+            "主方法",
+            "辅助",
+            "暂不使用",
+            "待定"
+          ]
+        },
+        "equivalent_score_method_reason": {
+          "type": "string"
+        },
+        "line_difference_method_status": {
+          "enum": [
+            "主方法",
+            "辅助",
+            "暂不使用",
+            "待定"
+          ]
+        },
+        "line_difference_method_reason": {
+          "type": "string"
+        },
+        "why_not_other_methods": {
+          "type": "string",
+          "description": "说明其他方法为什么不单独作为主方法"
+        },
+        "impact_on_reach_range": {
+          "type": "string"
+        },
+        "impact_on_match_range": {
+          "type": "string"
+        },
+        "impact_on_safety_range": {
+          "type": "string"
+        },
+        "method_risks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pending_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "verification_status": {
+          "enum": [
+            "未核验",
+            "已核验",
+            "存疑",
+            "待补充"
+          ]
+        },
+        "training_rule_basis": {
+          "type": "string",
+          "description": "训练文件中的方法选择规则依据，例如高前15%位次比例法、中15%-80%同位分法、低后20%线差数值法；二本/二批次特殊规则如适用。"
+        },
+        "scenario_type": {
+          "enum": [
+            "普通场景",
+            "二本二批次",
+            "待判断"
+          ],
+          "description": "用于判断是否适用普通分段规则或二本/二批次特殊规则。"
+        },
+        "reference_population": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ],
+          "description": "参考总量：同科类/同选科参考总人数，或批次内总人数；缺失则不得判断前15%、15%-80%或后20%。"
+        },
+        "reference_population_source": {
+          "type": "string",
+          "description": "参考总量来源；没有来源则写待补充。"
+        },
+        "batch_inner_rank": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ],
+          "description": "批次内真实排名，二本/二批次优先使用。"
+        },
+        "position_ratio": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ],
+          "description": "位次/参考总量或批次内排名/批次内总人数。"
+        },
+        "calculation_trace": {
+          "type": "string",
+          "description": "线差、位置比例、批次内位置比例等计算过程；数据不足时必须说明无法计算。"
+        },
+        "known_data_only": {
+          "type": "string",
+          "description": "只列用户已提供或证据表已有的数据。"
+        },
+        "forbidden_reason_check": {
+          "type": "string",
+          "description": "检查是否出现未经证实的省份数据稳定、第三方数据充分、同分人数多等理由。"
+        },
+        "method_selection_gate_passed": {
+          "type": "boolean",
+          "description": "是否已经具备按训练文件分段规则选择主方法的必要数据。"
+        }
+      },
+      "additionalProperties": true
+    },
+    "research_tasks": {
+      "type": "array",
+      "description": "用户评分前由 Agent 生成的联网检索任务表。用于记录查什么、优先来源、检索状态和缺失信息。",
+      "items": {
+        "type": "object",
+        "required": [
+          "research_task_id",
+          "target_type",
+          "target_name",
+          "question",
+          "priority_sources",
+          "search_status",
+          "required_before_scoring"
+        ],
+        "properties": {
+          "research_task_id": {
+            "type": "string"
+          },
+          "related_volunteer": {
+            "type": "string"
+          },
+          "target_type": {
+            "enum": [
+              "院校",
+              "专业",
+              "城市",
+              "专业组",
+              "校区",
+              "招生章程",
+              "录取数据",
+              "生活环境",
+              "风险",
+              "其他"
+            ]
+          },
+          "target_name": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string",
+            "description": "这次检索要回答的问题"
+          },
+          "search_queries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "priority_sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "search_status": {
+            "enum": [
+              "待检索",
+              "已检索",
+              "部分完成",
+              "未找到",
+              "存疑"
+            ]
+          },
+          "found_summary": {
+            "type": "string"
+          },
+          "missing_information": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "write_to_tables": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_before_scoring": {
+            "enum": [
+              "必须",
+              "建议",
+              "可选"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "source_candidates": {
+      "type": "array",
+      "description": "已使用或建议继续核验的信息来源清单。用于避免把查资料责任推给用户。",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_candidate_id",
+          "source_name",
+          "source_level",
+          "recommended_use",
+          "verification_importance",
+          "current_status"
+        ],
+        "properties": {
+          "source_candidate_id": {
+            "type": "string"
+          },
+          "related_target": {
+            "type": "string"
+          },
+          "source_name": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "source_level": {
+            "enum": [
+              "官方",
+              "半官方",
+              "公共服务",
+              "经验参考",
+              "待核验"
+            ]
+          },
+          "recommended_use": {
+            "type": "string"
+          },
+          "verification_importance": {
+            "enum": [
+              "必须",
+              "建议",
+              "可选"
+            ]
+          },
+          "current_status": {
+            "enum": [
+              "已使用",
+              "待检索",
+              "未找到",
+              "存疑"
+            ]
+          },
+          "related_score_dimension": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

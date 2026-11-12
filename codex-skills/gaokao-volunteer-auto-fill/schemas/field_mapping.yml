@@ -1,0 +1,59 @@
+# 字段映射说明（供 agent 自动填表时使用）
+student_input:
+  year: 年份
+  province: 省份
+  subject_type: 科类/选科
+  batch: 批次
+  score: 高考总分
+  rank: 位次
+  batch_line: 省控线（批次线）
+  mode: 志愿模式
+  preferences: 院校/专业/城市权重与底线
+
+computed_fields:
+  line_difference:
+    target_sheet: 个人线差数据记录
+    target_field: 线差
+    formula: 高考总分 - 省控线（批次线）
+  rank_delta_ratio:
+    target_sheet: 位次院校数据表
+    target_field: （当年位次 - 多年平均位次）/ 当年位次
+    formula: (考生位次 - 院校多年平均录取位次) / 考生位次
+  equivalent_score_delta:
+    target_sheet: 同位分院校数据表
+    target_field: 录取分-当年同位分
+    formula: 院校录取分数 - 当年同位分
+  school_score:
+    target_field: 「院校」综合评分
+    formula: 环境评分、学习评分、生活评分、头衔评分的平均或加权平均
+  major_score:
+    target_field: 「专业」综合评分
+    formula: 兴趣意愿、能力匹配、未来发展、大学生活评分的平均或加权平均
+  city_score:
+    target_field: 「城市」综合评分
+    formula: 发展、生活、规划、意愿评分的平均或加权平均
+  volunteer_total_score:
+    target_field: 「志愿」综合总分
+    formula: 院校综合评分*院校权重 + 专业综合评分*专业权重 + 城市综合评分*城市权重
+
+source_required_fields:
+  - 院校真实校区
+  - 招生章程
+  - 专业组编号
+  - 专业组内专业
+  - 选科要求
+  - 体检/单科/外语限制
+  - 学费/中外合作/高收费
+  - 硕士点/博士点/保研率/就业率
+  - 城市人口/GDP/第三产业/薪资/房价
+
+user_confirmed_fields:
+  - 是否接受省外
+  - 是否接受民办
+  - 是否接受中外合作或高收费
+  - 是否接受调剂
+  - 不接受的专业
+  - 不接受的城市
+  - 不接受的校区/住宿/生活条件
+  - 三要素权重
+  - 最终确认选择

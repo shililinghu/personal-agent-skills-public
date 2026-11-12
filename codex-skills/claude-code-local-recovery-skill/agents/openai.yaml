@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude Code Local Recovery"
+  short_description: "Restore local Claude Code sessions after account changes"
+  default_prompt: "Use $claude-code-local-recovery to audit and restore my local Claude Code sessions after switching accounts."

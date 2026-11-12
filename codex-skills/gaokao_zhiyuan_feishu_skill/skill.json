@@ -1,0 +1,34 @@
+{
+  "name": "gaokao_zhiyuan_feishu_single_user_skill",
+  "display_name": "高考志愿决策助手（单用户飞书档案版｜联网资料卡先行）",
+  "version": "1.4.0",
+  "language": "zh-CN",
+  "description": "基于训练文件规则、官方信息、联网资料整理、专业/院校/城市资料卡、定位方法选择说明、风险审查、用户评分和决策留痕的高考志愿填报辅助 Skill。AI 负责先联网检索、整理资料和列出可选来源；用户在阅读资料卡后负责主观评分。定位方法选择必须严格依据训练文件中的分段规则，不得编造外部依据。",
+  "entry": "SKILL.md",
+  "tags": [
+    "高考志愿",
+    "飞书",
+    "多维表格",
+    "决策辅助",
+    "单用户档案"
+  ],
+  "capabilities": [
+    "user_intake",
+    "information_research",
+    "evidence_table_generation",
+    "research_pack_before_scoring",
+    "source_candidate_listing",
+    "internet_research_task_generation",
+    "positioning_method_rationale",
+    "major_explanation",
+    "school_evaluation",
+    "city_research",
+    "user_scoring_collection",
+    "score_aggregation",
+    "risk_review",
+    "volunteer_plan_generation",
+    "decision_record",
+    "feishu_archive_payload"
+  ],
+  "privacy_mode": "single_user_archive_only"
+}

@@ -1,0 +1,382 @@
+{
+  "archive_title": "2025志愿档案包｜咨询编号A023",
+  "consult_id": "A023",
+  "created_at": "2025-06-23T10:18:00+08:00",
+  "user_profile": {
+    "province": "示例省份",
+    "score": null,
+    "rank": null,
+    "subjects": "示例选科",
+    "batch": "本科批",
+    "budget": "待补充",
+    "accept_outside_province": "待定",
+    "accept_adjustment": "待定",
+    "accept_private": "待定",
+    "accept_joint_program": "待定",
+    "postgraduate_plan": "待定",
+    "priority_order": [
+      "待确认"
+    ],
+    "family_student_disagreement": "待补充",
+    "status": "初筛"
+  },
+  "rejection_rules": {
+    "absolute_rejections": [],
+    "cautious_items": [
+      "未核验专业组调剂范围",
+      "未核验学费和校区"
+    ],
+    "acceptable_items": []
+  },
+  "positioning_method_rationale": {
+    "primary_method": "待定",
+    "auxiliary_methods": [
+      "无"
+    ],
+    "score_band_judgement": "分数、位次和批次线尚未补充，暂不能判断高分段/中分段/低分段或压线状态。",
+    "available_data": {
+      "score_available": false,
+      "rank_available": false,
+      "batch_line_available": false,
+      "line_difference_available": false,
+      "current_one_point_table_available": false,
+      "historical_one_point_tables_available": false,
+      "historical_admission_scores_available": false,
+      "historical_admission_ranks_available": false,
+      "historical_batch_lines_available": false,
+      "admission_plan_change_available": false
+    },
+    "selection_reason": "基础分数、位次、批次线、参考总量和批次内真实排名尚未补充，不能按训练文件分段规则选择位次法、同位分法或线差法作为主方法。",
+    "rank_method_status": "待定",
+    "rank_method_reason": "缺少用户全省位次和目标院校往年录取位次，暂不能使用位次法。",
+    "equivalent_score_method_status": "待定",
+    "equivalent_score_method_reason": "缺少当年和往年一分一段表，暂不能换算同位分。",
+    "line_difference_method_status": "待定",
+    "line_difference_method_reason": "缺少分数和批次线，暂不能计算线差。",
+    "why_not_other_methods": "不是因为某种方法不好，而是缺少触发训练文件分段规则的必要数据；当前不能判断前15%、15%-80%或后20%，因此三种方法都暂不单独作为主方法。",
+    "impact_on_reach_range": "暂不生成。",
+    "impact_on_match_range": "暂不生成。",
+    "impact_on_safety_range": "暂不生成。",
+    "method_risks": [
+      "基础数据不足时强行定位会导致候选院校池失真。"
+    ],
+    "pending_data": [
+      "高考分数",
+      "全省位次",
+      "批次线",
+      "一分一段表",
+      "目标院校近年录取分和位次",
+      "招生计划变化"
+    ],
+    "evidence_ids": [],
+    "verification_status": "待补充",
+    "training_rule_basis": "训练文件规则：高前15%使用位次比例法；中15%-80%使用同位分法；低后20%使用线差数值法。二本/二批次场景：15%高分段位次比例法不能用，最后20%线差法可以用，1%-80%均使用同位分法且应使用批次内真实排名。",
+    "scenario_type": "待判断",
+    "reference_population": null,
+    "reference_population_source": "待补充",
+    "batch_inner_rank": null,
+    "position_ratio": null,
+    "calculation_trace": "缺少分数、位次、批次线、参考总量和批次内真实排名，无法计算线差、位置比例或批次内位置比例，因此不能按训练文件规则判断前15%、15%-80%或后20%。",
+    "known_data_only": "当前示例档案未补充考生原始数据。",
+    "forbidden_reason_check": "未使用任何未经证实的省份数据稳定、第三方数据充分、同分人数多等理由。",
+    "method_selection_gate_passed": false
+  },
+  "candidate_schools": [
+    {
+      "school_name": "示例大学",
+      "city": "示例城市",
+      "school_type": "待核验",
+      "school_level": "待核验",
+      "major_or_group": "示例专业组",
+      "historical_rank": "待核验",
+      "admission_plan": "待核验",
+      "category": "待定",
+      "reason": "用户提出关注，需进一步核验官方招生计划和往年录取位次。",
+      "main_risks": [
+        "专业组调剂风险待核验",
+        "校区和学费待核验"
+      ],
+      "verification_status": "未核验",
+      "selected_final": false,
+      "evidence_ids": [
+        "E001"
+      ],
+      "positioning_method_used": "待定",
+      "positioning_reason": "定位基础数据缺失，暂不纳入冲稳保判断。",
+      "positioning_method_rationale_id": "PMR001"
+    }
+  ],
+  "major_cards": [
+    {
+      "major_name": "示例专业",
+      "major_category": "待核验",
+      "what_to_study": "待根据高校培养方案和阳光高考专业库核验。",
+      "core_courses": [],
+      "suitable_for": [],
+      "not_suitable_for": [],
+      "math_requirement": "待核验",
+      "physics_requirement": "待核验",
+      "chem_bio_requirement": "待核验",
+      "postgraduate_recommendation": "待核验",
+      "employment_directions": [],
+      "work_environment": "待核验",
+      "industry_cycle": "待核验",
+      "common_misunderstandings": [
+        "不能只按专业名称和热度判断。"
+      ],
+      "application_risks": [
+        "需要核验学习内容、就业出口和是否依赖读研。"
+      ],
+      "conclusion": "需进一步了解"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "evidence_id": "E001",
+      "related_school": "示例大学",
+      "related_major": "示例专业组",
+      "info_type": "招生计划/专业组设置",
+      "source_level": "待核验",
+      "source_name": "待补充官方来源",
+      "source_url": "",
+      "summary": "尚未完成官方核验。",
+      "decision_impact": "待确认",
+      "verified_at": "",
+      "credibility": "待核验",
+      "needs_second_check": true,
+      "verification_status": "未核验"
+    }
+  ],
+  "risk_checks": [
+    {
+      "risk_item": "专业组调剂风险",
+      "exists": "待核验",
+      "level": "待核验",
+      "description": "需要确认专业组内是否存在用户不能接受的专业。",
+      "suggestion": "查看省考试院招生计划和高校招生章程。",
+      "related_target": "示例大学-示例专业组",
+      "evidence_ids": [
+        "E001"
+      ]
+    }
+  ],
+  "volunteer_plan": [],
+  "version_records": [
+    {
+      "version": "V1",
+      "updated_at": "2025-06-23T10:18:00+08:00",
+      "change_reason": "建立初始档案",
+      "major_changes": "生成基础结构，等待补充分数、位次、偏好和官方核验信息。",
+      "pending_verifications": [
+        "分数位次",
+        "招生计划",
+        "专业组设置",
+        "高校招生章程"
+      ],
+      "operator": "system"
+    }
+  ],
+  "report_markdown": "# 2025志愿档案包｜咨询编号A023\n\n当前为初筛档案，尚未形成最终志愿方案。Agent 应先生成联网检索任务、资料卡、已用来源和可选来源；用户阅读资料卡后再完成主观评分。最终填报前必须核验官方信息。",
+  "share_policy": {
+    "default_visibility": "owner_only",
+    "authorized_recipients": [],
+    "allow_public_link": false,
+    "notes": "默认仅用户本人可见；分享给家长或咨询师前需获得授权。"
+  },
+  "research_cards": [
+    {
+      "research_id": "I001",
+      "related_target": "示例大学-示例专业组",
+      "school_name": "示例大学",
+      "major_or_group": "示例专业组",
+      "city": "示例城市",
+      "school_facts": {
+        "校区": "待核验",
+        "学费": "待核验",
+        "生活环境": "待整理"
+      },
+      "major_facts": {
+        "学什么": "待根据官方培养方案整理",
+        "就业方向": "待核验"
+      },
+      "city_facts": {
+        "城市机会": "待整理",
+        "生活成本": "待整理"
+      },
+      "evidence_ids": [
+        "E001"
+      ],
+      "pending_user_score_dimensions": [
+        "院校认可度",
+        "校区/生活环境接受度",
+        "专业兴趣",
+        "城市喜欢程度"
+      ],
+      "verification_status": "未核验",
+      "search_completed": false,
+      "source_candidate_ids": [
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "used_source_ids": [],
+      "pending_information": [
+        "尚未完成联网检索，不能让用户盲评。"
+      ],
+      "ready_for_user_scoring": "不建议评分资料不足"
+    }
+  ],
+  "user_score_records": [
+    {
+      "score_id": "S001",
+      "related_target": "示例大学-示例专业组",
+      "score_category": "院校",
+      "dimension": "校区/生活环境接受度",
+      "agent_information_summary": "资料卡尚未完成联网检索；当前不建议用户盲评，应先补充来源核验。",
+      "user_score": null,
+      "user_reason": "",
+      "confirmation_status": "未评分",
+      "confirmed_by": "",
+      "confirmed_at": "",
+      "research_card_id": "I001",
+      "information_sufficiency": "资料不足"
+    }
+  ],
+  "score_summary": [
+    {
+      "related_target": "示例大学-示例专业组",
+      "school_average": null,
+      "major_average": null,
+      "city_average": null,
+      "school_weight": null,
+      "major_weight": null,
+      "city_weight": null,
+      "user_preference_total": null,
+      "risk_level": "待核验",
+      "pending_verification_count": 1,
+      "suggested_action": "待用户评分"
+    }
+  ],
+  "research_tasks": [
+    {
+      "research_task_id": "R001",
+      "related_volunteer": "示例大学-示例专业组",
+      "target_type": "院校",
+      "target_name": "示例大学",
+      "question": "核验招生章程、招生计划、真实校区、学费、转专业政策、生活环境等评分前必需信息。",
+      "search_queries": [
+        "示例大学 本科招生网 招生章程",
+        "示例大学 转专业 政策",
+        "示例大学 校区 学费 宿舍"
+      ],
+      "priority_sources": [
+        "省教育考试院/招生考试院",
+        "高校本科招生网",
+        "高校招生章程",
+        "高校教务处或学院官网",
+        "阳光高考平台"
+      ],
+      "search_status": "待检索",
+      "found_summary": "尚未联网检索，不能进入完整用户评分。",
+      "missing_information": [
+        "真实就读校区",
+        "学费住宿",
+        "转专业政策",
+        "目标专业资源",
+        "生活环境"
+      ],
+      "write_to_tables": [
+        "AI 信息整理表",
+        "证据来源表",
+        "用户评分表摘要"
+      ],
+      "required_before_scoring": "必须",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "research_task_id": "R002",
+      "related_volunteer": "示例大学-示例专业组",
+      "target_type": "专业",
+      "target_name": "示例专业",
+      "question": "整理专业学习内容、核心课程、能力要求、就业方向、读研依赖和填报风险。",
+      "search_queries": [
+        "示例专业 培养方案 核心课程",
+        "示例专业 阳光高考 专业介绍",
+        "示例专业 就业方向 读研"
+      ],
+      "priority_sources": [
+        "学院官网/培养方案",
+        "阳光高考专业库",
+        "就业质量报告"
+      ],
+      "search_status": "待检索",
+      "found_summary": "尚未联网检索。",
+      "missing_information": [
+        "核心课程",
+        "就业方向",
+        "读研依赖",
+        "工作环境"
+      ],
+      "write_to_tables": [
+        "专业理解表",
+        "AI 信息整理表",
+        "用户评分表摘要"
+      ],
+      "required_before_scoring": "必须",
+      "evidence_ids": []
+    }
+  ],
+  "source_candidates": [
+    {
+      "source_candidate_id": "S001",
+      "related_target": "示例大学-示例专业组",
+      "source_name": "省教育考试院/招生考试院",
+      "source_url": "",
+      "source_level": "官方",
+      "recommended_use": "核验招生计划、志愿规则、往年投档/录取数据。",
+      "verification_importance": "必须",
+      "current_status": "待检索",
+      "related_score_dimension": "录取安全参考，不属于用户喜好分",
+      "notes": "最终填报必须以此类官方数据为准。"
+    },
+    {
+      "source_candidate_id": "S002",
+      "related_target": "示例大学-示例专业组",
+      "source_name": "高校本科招生网/招生章程",
+      "source_url": "",
+      "source_level": "官方",
+      "recommended_use": "核验招生章程、专业录取规则、校区、学费、体检/单科限制。",
+      "verification_importance": "必须",
+      "current_status": "待检索",
+      "related_score_dimension": "院校认可度、校区/生活环境、风险评分",
+      "notes": "招生章程优先级高于经验信息。"
+    },
+    {
+      "source_candidate_id": "S003",
+      "related_target": "示例专业",
+      "source_name": "学院官网/培养方案/阳光高考专业库",
+      "source_url": "",
+      "source_level": "官方",
+      "recommended_use": "核验专业学什么、核心课程、培养目标、能力要求。",
+      "verification_importance": "建议",
+      "current_status": "待检索",
+      "related_score_dimension": "专业兴趣、学习内容接受度、能力匹配度",
+      "notes": "用户专业评分应基于这些资料。"
+    },
+    {
+      "source_candidate_id": "S004",
+      "related_target": "示例城市",
+      "source_name": "地方统计局/城市统计公报",
+      "source_url": "",
+      "source_level": "官方",
+      "recommended_use": "核验城市人口、产业结构、经济数据。",
+      "verification_importance": "建议",
+      "current_status": "待检索",
+      "related_score_dimension": "城市机会吸引力、生活成本接受度",
+      "notes": "城市偏好分由用户打，Agent 只整理事实。"
+    }
+  ]
+}
